@@ -135,6 +135,7 @@ def get_largest(lst):
 
     return largest
 
+
 def is_unique(string):
     """
     Checks that all characters in a string are unique. Returns true/false.
@@ -183,6 +184,7 @@ def urlify(string):
 
     return new_string
 
+
 def urlify2(string):
     """
     Replace all the spaces in a string with '%20' without using built-in methods.
@@ -205,6 +207,7 @@ def urlify2(string):
         result += char
 
     return result
+
 
 def is_palindrome(string):
     """
@@ -229,6 +232,8 @@ def is_palindrome(string):
         j -= 1
 
     return True
+
+
 
 
 if __name__ == "__main__":
