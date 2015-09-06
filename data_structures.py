@@ -11,4 +11,4 @@ class Node(object):
         self.next = None
 
     def __repr__(self):
-        return "<Node data: %s, next: %s>" % (self.data, self.next)
+        return "<Node data: %s>" % self.data
