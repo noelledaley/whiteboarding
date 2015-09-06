@@ -234,7 +234,30 @@ def is_palindrome(string):
     return True
 
 
+def check_permutation(string1, string2):
+    """
+    Given two strings, check to see if one is a permutation of the other.
 
+    >>> check_permutation('hello', 'loleh')
+    True
+
+    >>> check_permutation('this is not', 'a permutation')
+    False
+
+    """
+
+    # Using 2 dictionaries becuase we need to keep track of how many of each letter
+    # or space occurs.
+    chars = {}
+    chars2 = {}
+
+    for char in string1:
+        chars[char] = chars.setdefault(char, 0) + 1
+
+    for char in string2:
+        chars2[char] = chars2.setdefault(char, 0) + 1
+
+    return chars == chars2
 
 if __name__ == "__main__":
     import doctest
