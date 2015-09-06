@@ -9,7 +9,7 @@ def check_zero_sum(lst):
     >>> check_zero_sum([-1, 0, 3, 3])
     False
 
-    Runtime: O(n) since we're iterating through each item in list.
+    Runtime: gO(n) since we're iterating through each item in list.
     """
 
     sum = 0
@@ -80,6 +80,30 @@ def count_zero_pairs(lst):
                 count += 1
 
     return count
+
+
+def get_smallest(lst):
+    """
+    Find the smallest integer in a list and return it, without using built-in sort method.
+
+    >>> get_smallest([5, 5, -2, 3])
+    -2
+
+    >>> get_smallest([-5, 5, -2, 3])
+    -5
+
+    >>> get_smallest([1, 5, 2, 0])
+    0
+
+    """
+
+    smallest = lst[0]
+
+    for num in lst:
+        if num < smallest:
+            smallest = num
+
+    return smallest
 
 
 if __name__ == "__main__":
