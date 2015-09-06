@@ -207,9 +207,28 @@ def urlify2(string):
     return result
 
 def is_palindrome(string):
-    """Checks if a string is a palindrome."""
+    """
+    Checks if a string is a palindrome.
 
+    >>> is_palindrome('banjo')
+    False
 
+    >>> is_palindrome('racecar')
+    True
+
+    """
+
+    i = 0
+    j = len(string) - 1
+
+    while i < j:
+        if string[i] != string[j]:
+            return False
+
+        i += 1
+        j -= 1
+
+    return True
 
 
 if __name__ == "__main__":
