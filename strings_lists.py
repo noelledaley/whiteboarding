@@ -106,6 +106,29 @@ def get_smallest(lst):
     return smallest
 
 
+def get_largest(lst):
+    """
+    Find the largest integer in a list and return it, without using built-in sort method.
+
+    >>> get_largest([5, 5, -2, 3])
+    5
+
+    >>> get_largest([7, -2, 9])
+    9
+
+    >>> get_largest([-1, -5, -2, 0])
+    0
+
+    """
+
+    largest = lst[0]
+
+    for num in lst:
+        if num > largest:
+            largest = num
+
+    return largest
+
 if __name__ == "__main__":
     import doctest
     print
