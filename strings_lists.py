@@ -8,6 +8,8 @@ def check_zero_sum(lst):
 
     >>> check_zero_sum([-1, 0, 3, 3])
     False
+
+    Runtime: O(n) since we're iterating through each item in list.
     """
 
     sum = 0
@@ -30,6 +32,8 @@ def check_zero_sum2(lst):
 
     >>> check_zero_sum([-1, 0, 3, 3])
     False
+
+    Runtime: O(log n)? since we're iterating through 1/2 of the list.
 
     """
 
@@ -61,6 +65,8 @@ def count_zero_pairs(lst):
 
     >> count_zero_pairs([1, 1, -1, -1, 2, -2])
     3
+
+    Runtime: O(n^2) since we are iterating through lst twice.
     """
 
     count = 0
