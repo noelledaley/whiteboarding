@@ -170,6 +170,8 @@ def urlify(string):
     >>> urlify('nope')
     'nope'
 
+    Runtime: O(n) since we have to iterate through all characters.
+
     """
 
     new_string = string.split()
@@ -191,6 +193,8 @@ def urlify2(string):
     >>> urlify('nope')
     'nope'
 
+    Runtime: O(n) since we have to iterate through all characters.
+
     """
 
     result = ""
@@ -204,6 +208,8 @@ def urlify2(string):
 
 def is_palindrome(string):
     """Checks if a string is a palindrome."""
+
+
 
 
 if __name__ == "__main__":
