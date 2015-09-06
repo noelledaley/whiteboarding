@@ -17,6 +17,25 @@ def print_all(ll):
         print current.data
         current = current.next
 
+
+def has_loop(ll):
+    """
+    Determine whether or not a linked list has a loop in it.
+    """
+
+    current = ll.head
+    checked = set()
+    checked.add(current)
+
+    while current.next:
+        if current.next not in checked:
+            checked.add(current.next)
+        else:
+            return True
+
+    return False
+
+
 def remove_duplicates(ll):
     """Given a linked list, remove duplicates."""
 
@@ -45,24 +64,6 @@ def remove_duplicates(ll):
             break
 
         current = current.next
-
-
-def has_loop(ll):
-    """
-    Determine whether or not a linked list has a loop in it.
-    """
-
-    current = ll.head
-    checked = set()
-    checked.add(current)
-
-    while current.next:
-        if current.next not in checked:
-            checked.add(current.next)
-        else:
-            return True
-
-    return False
 
 
 """
