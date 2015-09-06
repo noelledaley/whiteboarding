@@ -1,7 +1,17 @@
-from data_structures import LinkedList, Node
+from data_structures import LinkedList, Node, animals
 
 def print_all(ll):
-    """Print all nodes in a LinkedList."""
+    """Print all nodes in a LinkedList.
+
+    >>> print_all(animals)
+    dog
+    cat
+    bird
+    cow
+    cat
+    >>>
+
+    """
 
     current = ll.head
     while current:
@@ -42,3 +52,11 @@ Count number of zero pairs in a list.
 
 (Try using a dictionary to make more efficient)
 """
+
+if __name__ == "__main__":
+    import doctest
+    print
+    result = doctest.testmod()
+    if not result.failed:
+        print "*** %s tests passed!" % result.attempted
+    print
