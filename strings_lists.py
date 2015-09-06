@@ -244,6 +244,8 @@ def check_permutation(string1, string2):
     >>> check_permutation('this is not', 'a permutation')
     False
 
+    Runtime: O(n) since we're running two loops in succession.
+
     """
 
     # Using 2 dictionaries becuase we need to keep track of how many of each letter
@@ -252,12 +254,15 @@ def check_permutation(string1, string2):
     chars2 = {}
 
     for char in string1:
+        # setdefault will check if a key already exists. If it does, it'll add 1 to that value.
+        # if it doesn't, it'll set that value to 0 and add 1.
         chars[char] = chars.setdefault(char, 0) + 1
 
     for char in string2:
         chars2[char] = chars2.setdefault(char, 0) + 1
 
     return chars == chars2
+
 
 if __name__ == "__main__":
     import doctest
