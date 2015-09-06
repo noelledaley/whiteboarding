@@ -264,6 +264,27 @@ def check_permutation(string1, string2):
     return chars == chars2
 
 
+def check_permutation2(string1, string2):
+    """
+    Given two strings, check to see if one is a permutation of the other using lists.
+
+    >>> check_permutation('my race car', 'ym ecar rac')
+    True
+
+    >>> check_permutation('this is not', 'a permutation')
+    False
+
+    Runtime: O(n) since we're running two loops in succession.
+    Runtime of sorting lists using built-in method is O(n log(n)).
+
+    """
+
+    lst1 = [char for char in string1]
+    lst2 = [char for char in string2]
+
+    return sorted(list1) == sorted(list2)
+
+
 if __name__ == "__main__":
     import doctest
     print
