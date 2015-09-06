@@ -1,8 +1,9 @@
 
 def check_zero_sum(lst):
     """
-    Given a list, check if the sum of a list is 0 without using the built in sum method.
+    Given a list, check if the sum of a list is 0 without using the built-in sum method.
     """
+
 
 
 def check_zero_sum2(lst):
