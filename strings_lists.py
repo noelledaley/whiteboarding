@@ -161,8 +161,25 @@ def is_unique(string):
 
 
 def urlify(string):
-    """Replace all the spaces in a string with '%20'."""
+    """
+    Replace all the spaces in a string with '%20'.
 
+    >>> urlify('hi i am a string')
+    'hi%20i%20am%20a%20string'
+
+    >>> urlify('nope')
+    'nope'
+
+    """
+
+    new_string = string.split()
+
+    if len(new_string) < 2:
+        return string
+
+    new_string = '%20'.join(new_string)
+
+    return new_string
 
 
 def is_palindrome(string):
