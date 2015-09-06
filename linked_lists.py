@@ -21,6 +21,10 @@ def print_all(ll):
 def has_loop(ll):
     """
     Determine whether or not a linked list has a loop in it.
+
+    >>> has_loop(cities)
+    True
+
     """
 
     current = ll.head
