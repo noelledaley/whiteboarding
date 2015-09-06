@@ -40,3 +40,16 @@ berkeley.next = oakland
 oakland.next = seattle
 seattle.next = portland
 portland.next = oakland
+
+numbers = LinkedList()
+one = Node(1)
+two = Node(2)
+three = Node(3)
+two_two = Node(2)
+four = Node(4)
+
+numbers.head = one
+one.next = two
+two.next = three
+three.next = two_two
+two_two.next = four
