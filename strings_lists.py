@@ -134,7 +134,23 @@ def get_largest(lst):
     return largest
 
 def is_unique(string):
-    """Checks that all characters in a string are unique. Returns true/false."""
+    """
+    Checks that all characters in a string are unique. Returns true/false.
+
+    >>> is_unique('hello')
+    False
+
+    >>> is_unique('asdfghjk')
+    True
+
+    """
+
+    unique_set = set(string)
+
+    if len(string) == len(unique_set):
+        return True
+
+    return False
 
 
 def urlify(string):
