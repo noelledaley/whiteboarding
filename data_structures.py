@@ -14,3 +14,20 @@ class Node(object):
 
     def __repr__(self):
         return "<Node data: %s>" % self.data
+
+
+### Examples ###
+
+animals = LinkedList
+dog = Node('dog')
+cat = Node('cat')
+bird = Node('bird')
+cow = Node('cow')
+
+animals.head = dog
+dog.next = cat
+cat.next = bird
+bird.next = cow
+
+# Purposefully adding a duplicate to test remove_duplicates
+cow.next = Node('cat')
