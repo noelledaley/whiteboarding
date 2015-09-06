@@ -71,6 +71,8 @@ def count_zero_pairs(lst):
 
     count = 0
 
+    # Keep track of all zero pairs in a set. This is more efficient than storing in a list
+    # since we can easily check if values are already in the set.
     checked = set()
 
     for num in lst:
@@ -143,10 +145,15 @@ def is_unique(string):
     >>> is_unique('asdfghjk')
     True
 
+    Runtime: O(n) since we have to convert the string to a set first.
+    Checking if the len's are equal is only O(1), though.
+
     """
 
+    # Converting the string to a set will eliminate any duplicate letters.
     unique_set = set(string)
 
+    # If the length of the original string and the set are equal, we know no duplicates were removed.
     if len(string) == len(unique_set):
         return True
 
@@ -155,6 +162,8 @@ def is_unique(string):
 
 def urlify(string):
     """Replace all the spaces in a string with '%20'."""
+
+
 
 def is_palindrome(string):
     """Checks if a string is a palindrome."""
