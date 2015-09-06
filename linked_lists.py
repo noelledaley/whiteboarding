@@ -71,18 +71,6 @@ def remove_duplicates(ll):
     return checked
 
 
-"""
-Given a list, check if the sum of a list is 0 without using the built in sum method.
-
-Try using a second pointer(index) to make more efficient.
-"""
-
-"""
-Count number of zero pairs in a list.
-
-(Try using a dictionary to make more efficient)
-"""
-
 if __name__ == "__main__":
     import doctest
     print
