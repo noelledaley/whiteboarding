@@ -181,6 +181,26 @@ def urlify(string):
 
     return new_string
 
+def urlify2(string):
+    """
+    Replace all the spaces in a string with '%20' without using built-in methods.
+
+    >>> urlify('hi i am a string')
+    'hi%20i%20am%20a%20string'
+
+    >>> urlify('nope')
+    'nope'
+
+    """
+
+    result = ""
+
+    for char in string:
+        if char == " ":
+            char = '%20'
+        result += char
+
+    return result
 
 def is_palindrome(string):
     """Checks if a string is a palindrome."""
