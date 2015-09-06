@@ -1,4 +1,4 @@
-from data_structures import LinkedList, Node, animals, cities
+from data_structures import LinkedList, Node, animals, cities, numbers
 
 def print_all(ll):
     """Print all nodes in a LinkedList.
@@ -46,33 +46,29 @@ def has_loop(ll):
 
 
 def remove_duplicates(ll):
-    """Given a linked list, remove duplicates."""
+    """Given a linked list, remove duplicate values.
+
+    >>> remove_duplicates(numbers)
+    set([1, 2, 3, 4])
+
+    """
 
     current = ll.head
-    print 'starting with:', current
 
     # Use a set to check if we've already checked a node.
     checked = set()
-    checked.add(current)
+    checked.add(current.data)
 
     while current.next:
-        print 'looking at: ', current
-        print 'current.next is: ', current.next
-        print current.next, 'not in checked?', current.next not in checked
 
-        if current.next not in checked:
-            checked.add(current.next)
-            print 'added'
+        if current.next.data not in checked:
+            checked.add(current.next.data)
+            current = current.next
 
-        # FIXME!
         else:
-            print 'duplicate!'
-            print 'current.next was', current.next
             current.next = current.next.next
-            print 'but current.next is now', current.next
-            break
 
-        current = current.next
+    return checked
 
 
 """
