@@ -25,6 +25,9 @@ def has_loop(ll):
     >>> has_loop(cities)
     True
 
+    >>> has_loop(animals)
+    False
+
     """
 
     current = ll.head
@@ -32,8 +35,10 @@ def has_loop(ll):
     checked.add(current)
 
     while current.next:
+
         if current.next not in checked:
             checked.add(current.next)
+            current = current.next
         else:
             return True
 
