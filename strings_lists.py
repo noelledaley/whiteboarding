@@ -9,7 +9,7 @@ def check_zero_sum(lst):
     >>> check_zero_sum([-1, 0, 3, 3])
     False
 
-    Runtime: gO(n) since we're iterating through each item in list.
+    Runtime: O(n) since we're iterating through each item in list.
     """
 
     sum = 0
@@ -95,6 +95,8 @@ def get_smallest(lst):
     >>> get_smallest([1, 5, 2, 0])
     0
 
+    Runtime: O(n)
+
     """
 
     smallest = lst[0]
@@ -119,6 +121,8 @@ def get_largest(lst):
     >>> get_largest([-1, -5, -2, 0])
     0
 
+    Runtime: O(n)
+
     """
 
     largest = lst[0]
@@ -128,6 +132,7 @@ def get_largest(lst):
             largest = num
 
     return largest
+
 
 if __name__ == "__main__":
     import doctest
