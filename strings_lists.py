@@ -76,10 +76,6 @@ def count_zero_pairs(lst):
     return count
 
 
-def count_zero_pairs2(lst):
-    """Same as above, but try using a dictionary to make more efficient."""
-
-
 if __name__ == "__main__":
     import doctest
     print
