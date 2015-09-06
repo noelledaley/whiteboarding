@@ -50,8 +50,30 @@ def check_zero_sum2(lst):
 
 
 def count_zero_pairs(lst):
+    """
+    Count number of zero pairs in a list.
 
-    """Count number of zero pairs in a list."""
+    >>> count_zero_pairs([1, 0, -1, 2, 2])
+    1
+
+    >>> count_zero_pairs([0, -3, 4, -5])
+    0
+
+    >> count_zero_pairs([1, 1, -1, -1, 2, -2])
+    3
+    """
+
+    count = 0
+
+    checked = set()
+
+    for num in lst:
+        if num > 0 and -num in lst:
+            if (num, -num) not in checked and (-num, num) not in checked:
+                checked.add((num, -num))
+                count += 1
+
+    return count
 
 
 def count_zero_pairs2(lst):
