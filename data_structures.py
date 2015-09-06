@@ -18,7 +18,7 @@ class Node(object):
 
 ### Examples ###
 
-animals = LinkedList
+animals = LinkedList()
 dog = Node('dog')
 cat = Node('cat')
 bird = Node('bird')
@@ -29,5 +29,14 @@ dog.next = cat
 cat.next = bird
 bird.next = cow
 
-# Purposefully adding a duplicate to test remove_duplicates
-cow.next = Node('cat')
+cities = LinkedList()
+berkeley = Node('berkeley')
+oakland = Node('oakland')
+seattle = Node('seattle')
+portland = Node('portland')
+
+cities.head = berkeley
+berkeley.next = oakland
+oakland.next = seattle
+seattle.next = portland
+portland.next = oakland
