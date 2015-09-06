@@ -1,3 +1,12 @@
+from data_structures import LinkedList, Node
+
+def print_all(ll):
+    """Print all nodes in a LinkedList."""
+
+    current = ll.head
+    while current:
+        print current.data
+        current = current.next
 
 def remove_duplicates(ll):
     """Given a linked list, remove duplicates."""
@@ -13,7 +22,7 @@ def remove_duplicates(ll):
         if current.next not in checked:
             checked.add(current.next)
 
-        elif:
+        else:
             current.next = current.next.next
 
         current = current.next
