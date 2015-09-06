@@ -133,6 +133,16 @@ def get_largest(lst):
 
     return largest
 
+def is_unique(string):
+    """Checks that all characters in a string are unique. Returns true/false."""
+
+
+def urlify(string):
+    """Replace all the spaces in a string with '%20'."""
+
+def is_palindrome(string):
+    """Checks if a string is a palindrome."""
+
 
 if __name__ == "__main__":
     import doctest
