@@ -22,7 +22,31 @@ def check_zero_sum(lst):
 
 
 def check_zero_sum2(lst):
-    """Same as above, but try using a second pointer(index) to make more efficient."""
+    """
+    Same as above, but try using a second pointer(index) to make more efficient.
+
+    >>> check_zero_sum([-1, 0, 3, 1, -3])
+    True
+
+    >>> check_zero_sum([-1, 0, 3, 3])
+    False
+
+    """
+
+    i = 0
+    j = 0
+    sum = 0
+
+    while i<j:
+        sum += lst[i]
+        sum += lst[j]
+        i += 1
+        j -= 1
+
+    if sum == 0:
+        return True
+
+    return False
 
 
 def count_zero_pairs(lst):
