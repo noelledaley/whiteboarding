@@ -8,6 +8,7 @@ def print_all(ll):
     cat
     bird
     cow
+    zebra
     >>>
 
     """
@@ -22,7 +23,12 @@ def add_node(ll, data):
     """
     Add node to LinkedList with no tail.
 
-    Returns updated LinkedList.
+    >>> add_node(animals, 'zebra')
+    dog
+    cat
+    bird
+    cow
+    zebra
     """
 
     current = ll.head
@@ -34,7 +40,35 @@ def add_node(ll, data):
 
     current.next = Node(data)
 
-    return ll
+    print_all(ll)
+
+
+def remove_node(ll, data):
+    """Remove node from LinkedList with given data.
+
+    >>> remove_node(animals, 'zebra')
+    dog
+    cat
+    bird
+    cow
+    """
+
+    current = ll.head
+
+    # If the head contains the data we're looking for, replace head with next Node.
+    if current.data == data:
+        current = current.next
+        return
+
+    while current.next:
+
+        if current.next.data == data:
+            current.next = current.next.next
+        else:
+            current = current.next
+
+    print_all(ll)
+
 
 
 def has_loop(ll):
