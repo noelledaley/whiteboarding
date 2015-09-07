@@ -284,6 +284,16 @@ def check_permutation2(string1, string2):
 
     return sorted(list1) == sorted(list2)
 
+def get_products(nums):
+    """
+    Write a function get_products_of_all_ints_except_at_index() that takes an array of integers and returns an array of the products.
+
+    >>> get_products([1, 7, 3, 4])
+    [84, 12, 28, 21]
+
+    """
+
+    #TODO
 
 if __name__ == "__main__":
     import doctest
