@@ -11,6 +11,8 @@ def print_all(ll):
     zebra
     >>>
 
+    Runtime: O(n)
+
     """
 
     current = ll.head
@@ -29,11 +31,11 @@ def add_node(ll, data):
     bird
     cow
     zebra
+
+    Runtime: O(n)
     """
 
     current = ll.head
-    checked = set()
-    checked.add(current)
 
     while current.next:
         current = current.next
@@ -51,6 +53,8 @@ def remove_node(ll, data):
     cat
     bird
     cow
+
+    Runtime: O(n)
     """
 
     current = ll.head
