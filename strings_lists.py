@@ -38,10 +38,14 @@ def check_zero_sum2(lst):
     """
 
     i = 0
-    j = 0
+    j = len(lst) - 1
     sum = 0
 
-    while i<j:
+    while i<=j:
+        if i == j:
+            sum += lst[i]
+            i += 1
+
         sum += lst[i]
         sum += lst[j]
         i += 1
