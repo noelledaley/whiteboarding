@@ -18,6 +18,21 @@ def print_all(ll):
         current = current.next
 
 
+def add_node(ll, data):
+    """
+    Add node to LinkedList with no tail.
+    """
+
+    current = ll.head
+    checked = set()
+    checked.add(current)
+
+    while current.next:
+        current = current.next
+
+    current.next = Node(data)
+
+
 def has_loop(ll):
     """
     Determine whether or not a linked list has a loop in it.
