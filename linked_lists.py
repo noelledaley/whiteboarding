@@ -21,6 +21,8 @@ def print_all(ll):
 def add_node(ll, data):
     """
     Add node to LinkedList with no tail.
+
+    Returns updated LinkedList.
     """
 
     current = ll.head
@@ -31,6 +33,8 @@ def add_node(ll, data):
         current = current.next
 
     current.next = Node(data)
+
+    return ll
 
 
 def has_loop(ll):
