@@ -55,7 +55,7 @@ def check_zero_sum2(lst):
 
 def count_zero_pairs(lst):
     """
-    Count number of zero pairs in a list.
+    Count number of unique zero pairs in a list.
 
     >>> count_zero_pairs([1, 0, -1, 2, 2])
     1
@@ -63,24 +63,18 @@ def count_zero_pairs(lst):
     >>> count_zero_pairs([0, -3, 4, -5])
     0
 
-    >> count_zero_pairs([1, 1, -1, -1, 2, -2])
-    3
+    >>> count_zero_pairs([1, 1, -1, -1, 2, -2, 8, 1])
+    2
 
     Runtime: O(n^2) since we are iterating through lst twice.
     """
 
     count = 0
+    unique_lst = set(lst)
 
-    # Keep track of all zero pairs in a set. This is more efficient than storing in a list
-    # since we can easily check if values are already in the set.
-    checked = set()
-
-    for num in lst:
-        if num > 0 and -num in lst:
-            if (num, -num) not in checked and (-num, num) not in checked:
-                checked.add((num, -num))
-                count += 1
-
+    for num in unique_lst:
+        if num > 0 and -num in unique_lst:
+            count += 1
     return count
 
 
@@ -288,7 +282,7 @@ def get_products(nums):
     """
     Write a function get_products_of_all_ints_except_at_index() that takes an array of integers and returns an array of the products.
 
-    >>> get_products([1, 7, 3, 4])
+    get_products([1, 7, 3, 4])
     [84, 12, 28, 21]
 
     """
