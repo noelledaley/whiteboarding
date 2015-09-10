@@ -317,6 +317,16 @@ def split(astring, splitter):
       not need to implemented that.
     """
 
+    for char in astring:
+        if char ==
+
+
+def lucky_numbers(n):
+    """
+    Return n unique random numbers from 1-10 (inclusive).
+
+    Given the numbers 1-10, return n random numbers, making sure to never return the same number twice. You can trust that this function will never be called with n < 0 or n > 10.
+    """
 
 
 if __name__ == '__main__':
