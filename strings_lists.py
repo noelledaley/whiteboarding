@@ -284,6 +284,7 @@ def check_permutation2(string1, string2):
 
     return sorted(list1) == sorted(list2)
 
+
 def get_products(nums):
     """
     Write a function get_products_of_all_ints_except_at_index() that takes an array of integers and returns an array of the products.
@@ -294,6 +295,7 @@ def get_products(nums):
     """
 
     #TODO
+
 
 def split(astring, splitter):
     """Split astring by splitter and return list of splits.
@@ -356,6 +358,7 @@ def merge_sorted_lists(la, lb):
             lb.pop(0)
 
     return sorted_list
+
 
 def reverse_list(ls):
     """
