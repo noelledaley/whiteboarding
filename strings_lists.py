@@ -318,9 +318,10 @@ def split(astring, splitter):
       when it is not passed anything for the splitter -- you do
       not need to implemented that.
     """
-
-    # for char in astring:
-    #     if char ==
+    
+    for i in range(len(astring)):
+        if astring[i] == splitter:
+            word = astring[:i]
 
 
 def lucky_numbers(n):
