@@ -318,7 +318,7 @@ def split(astring, splitter):
       when it is not passed anything for the splitter -- you do
       not need to implemented that.
     """
-    
+
     for i in range(len(astring)):
         if astring[i] == splitter:
             word = astring[:i]
@@ -336,10 +336,37 @@ def lucky_numbers(n):
     return numbers
 
 
-if __name__ == '__main__':
-    import doctest
-    if doctest.testmod().failed == 0:
-        print "\n*** ALL TESTS PASSED. FINE SPLITTING!\n"
+def merge_sorted_lists(la, lb):
+    """
+    Given two sorted lists, return a new, fully sorted list.
+    """
+
+    pass
+
+def reverse_list(ls):
+    """
+    Reverse a list in place.
+
+    >>> reverse_list([1, 2, 3])
+    [3, 2, 1]
+
+    >>> reverse_list([-2, -1, 0, 1, 2, 3])
+    [3, 2, 1, 0, -1, -2]
+    """
+
+    i = 0
+    j = len(ls) - 1
+
+    while i < j:
+        first = ls[i]
+        second = ls[j]
+        ls[i] = second
+        ls[j] = first
+        i += 1
+        j -= 1
+
+    return ls
+
 
 if __name__ == "__main__":
     import doctest
