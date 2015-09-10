@@ -1,3 +1,5 @@
+import random
+
 
 def check_zero_sum(lst):
     """
@@ -317,8 +319,8 @@ def split(astring, splitter):
       not need to implemented that.
     """
 
-    for char in astring:
-        if char ==
+    # for char in astring:
+    #     if char ==
 
 
 def lucky_numbers(n):
@@ -327,6 +329,10 @@ def lucky_numbers(n):
 
     Given the numbers 1-10, return n random numbers, making sure to never return the same number twice. You can trust that this function will never be called with n < 0 or n > 10.
     """
+
+    numbers = random.sample(range(1, 11), n)
+
+    return numbers
 
 
 if __name__ == '__main__':
