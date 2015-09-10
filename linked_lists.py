@@ -1,4 +1,4 @@
-from data_structures import LinkedList, Node, animals, cities, numbers
+from data_structures import LinkedList, Node, animals, cities, numbers, dog
 
 def print_all(ll):
     """Print all nodes in a LinkedList.
@@ -125,6 +125,27 @@ def remove_duplicates(ll):
             current.next = current.next.next
 
     return checked
+
+
+def reverse(head):
+    """
+    Write a function that takes the head node of a linked list and returns the head of a new, reversed linked list.
+
+    >>> reverse(dog)
+    'cow'
+    """
+
+    # Create new LinkedList, add current head but set next as None (since this will be new tail)
+    reversed_ll = LinkedList()
+    new_tail = head
+    new_tail.next = None
+    add(revsersed_ll, new_tail)
+
+    current = head
+
+    while current.next:
+        new_node = Node(current.next)
+        new_node.next = current
 
 
 if __name__ == "__main__":
