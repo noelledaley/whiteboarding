@@ -139,6 +139,8 @@ def reverse(head):
     output_head = None
 
     while current:
+        # Create new Node with current.data,
+        # set its .next as whatever is currently the output_head.
         output_head = Node(current.data, output_head)
         current = current.next
 
