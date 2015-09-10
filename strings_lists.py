@@ -339,9 +339,23 @@ def lucky_numbers(n):
 def merge_sorted_lists(la, lb):
     """
     Given two sorted lists, return a new, fully sorted list.
+
+    merge_sorted_lists([1, 3, 5, 7], [2, 4, 6, 8])
+    [1, 2, 3, 4, 5, 6, 7, 8]
+
     """
 
-    pass
+    sorted_list = []
+
+    while la and lb:
+        if la[0] < lb[0]:
+            sorted_list.append(la[0])
+            la.pop(0)
+        else:
+            sorted_list.append(lb[0])
+            lb.pop(0)
+
+    return sorted_list
 
 def reverse_list(ls):
     """
