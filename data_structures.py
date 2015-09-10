@@ -8,9 +8,9 @@ class LinkedList(object):
 class Node(object):
     """A basic unit of a LinkedList or Tree."""
 
-    def __init__(self, data):
+    def __init__(self, data, next=None):
         self.data = data
-        self.next = None
+        self.next = next
 
     def __repr__(self):
         return "<Node data: %s>" % self.data
