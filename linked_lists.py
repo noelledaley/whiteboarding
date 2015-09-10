@@ -1,4 +1,4 @@
-from data_structures import LinkedList, Node, animals, cities, numbers, dog
+from data_structures import LinkedList, Node, animals, cities, numbers, one
 
 def print_all(ll):
     """Print all nodes in a LinkedList.
@@ -131,21 +131,18 @@ def reverse(head):
     """
     Write a function that takes the head node of a linked list and returns the head of a new, reversed linked list.
 
-    >>> reverse(dog)
-    'cow'
+    >>> reverse(one)
+    <Node data: 4>
     """
 
-    # Create new LinkedList, add current head but set next as None (since this will be new tail)
-    reversed_ll = LinkedList()
-    new_tail = head
-    new_tail.next = None
-    add(revsersed_ll, new_tail)
-
     current = head
+    output_head = None
 
-    while current.next:
-        new_node = Node(current.next)
-        new_node.next = current
+    while current:
+        output_head = Node(current.data, output_head)
+        current = current.next
+
+    return output_head
 
 
 if __name__ == "__main__":
