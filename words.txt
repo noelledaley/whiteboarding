@@ -1,3 +1,5 @@
+cat
+act
 aalii
 abac
 abaca
