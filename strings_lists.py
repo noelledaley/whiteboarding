@@ -384,6 +384,28 @@ def reverse_list(ls):
 
     return ls
 
+def histogram(string):
+    """
+    Given a string, return a dictionary where the keys are letters and values are the frequency.
+    Do not include spaces.
+
+    >>> sorted(histogram('hackbright academy'))
+    ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'i', 'k', 'm', 'r', 't', 'y']
+
+    >>> sorted(histogram('banana'))
+    ['a', 'b', 'n']
+    """
+
+    hist = {}
+
+    for char in string:
+        if char == " ":
+            continue
+        else:
+            hist[char] = hist.setdefault(char, 0) + 1
+
+    return hist
+
 
 if __name__ == "__main__":
     import doctest
