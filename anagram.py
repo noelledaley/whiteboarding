@@ -1,8 +1,39 @@
 """Given a word list, find the word with the most anagrams in the list."""
 
-
 def find_most_anagrams_from_wordlist(wordlist):
     """Given a list of words, return the word with the most anagrams.
+
+    For a list of ['act', 'cat', 'bill']:
+    - 'act' and 'cat' are anagrams, so they both have 2 matching words.
+    - 'bill' has no anagrams, os it has one matching word (itself).
+
+    Given that 'act' is the first instance of the most-anagrammed word,
+    we return that.
+
+    >>> find_most_anagrams_from_wordlist(['act', 'cat', 'bill'])
+    'act'
+
+    Let's use a file of words where each line is a word:
+
+    >>> all_words = [w.strip() for w in open('words.txt')]
+    >>> find_most_anagrams_from_wordlist(all_words)
+    'angor'
+    """
+
+    anagrams = {}
+
+    for word in wordlist:
+        anagrams[tuple(sorted(word))] = anagrams.setdefault(tuple(sorted(word)), 0) + 1
+
+    most_frequent = max(anagrams.vals())
+
+    for word in wordlist:
+        if anagrams[word] == most_frequent:
+            return word
+
+
+def find_most_anagrams_from_wordlist(wordlist):
+    """Given a list of words, return the word with the most anagrams according to words.txt.
 
     For a list of ['act', 'cat', 'bill']:
     - 'act' and 'cat' are anagrams, so they both have 2 matching words.
