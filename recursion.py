@@ -16,12 +16,22 @@ def find_sum(lst):
 
 
 def factorial(n):
-    """Given a number, return its factorial."""
+    """
+    Given a number, return its factorial.
+
+    >>> factorial(5)
+    120
+
+    >
+    """
 
     if n <= 1:
         return n
 
     return n * factorial(n-1)
+
+
+
 
 if __name__ == "__main__":
     import doctest
