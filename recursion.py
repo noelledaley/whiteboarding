@@ -66,7 +66,11 @@ def reverse(string):
     'ereht ih'
     """
 
-    
+    if len(string) == 1:
+        return string[0]
+
+    # Important to return the last letter before making the recursive call
+    return string[-1] + reverse(string[:-1])
 
 if __name__ == "__main__":
     import doctest
