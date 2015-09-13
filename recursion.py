@@ -1,3 +1,4 @@
+
 def find_sum(lst):
     """Given a list of integers, return the sum of the list using recursion.
 
@@ -13,6 +14,14 @@ def find_sum(lst):
 
     return lst[0] + find_sum(lst[1:])
 
+
+def factorial(n):
+    """Given a number, return its factorial."""
+
+    if n <= 1:
+        return n
+
+    return n * factorial(n-1)
 
 if __name__ == "__main__":
     import doctest
