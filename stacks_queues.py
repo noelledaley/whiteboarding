@@ -43,6 +43,28 @@ def hot_potato(namelist, num):
 
     return namelist[0]
 
+
+def palindrome_deque(string):
+    """
+    Using a deque, check if a string is a palindrome.
+
+    >>> palindrome_deque('radar')
+    True
+
+    >>> palindrome_deque('dfsdf')
+    False
+    """
+
+    chars = list(string)
+
+    while len(chars) > 1:
+        first = chars.pop(0)
+        last = chars.pop()
+        if first != last:
+            return False
+
+    return True
+
 if __name__ == "__main__":
     import doctest
     print
