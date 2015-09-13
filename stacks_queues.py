@@ -38,7 +38,7 @@ def hot_potato(namelist, num):
             front = namelist.pop(0)
             namelist.append(front)
         # After num number of passes, remove the person at the front of the queue,
-        # since they have the potatoe
+        # since they have the potato
         namelist.pop(0)
 
     return namelist[0]
