@@ -72,6 +72,23 @@ def reverse(string):
     # Important to return the last letter before making the recursive call
     return string[-1] + reverse(string[:-1])
 
+
+def palindrome(string):
+    """
+    Using recursion, write a function that takes a string as a parameter and returns True if the string is a palindrome.
+
+    >>> palindrome('kayak')
+    True
+
+    >>> palindrome('hello')
+    False
+    """
+
+    if len(string) <= 2:
+        return string[0] == string[-1]
+
+    return string[0] == string[-1] and palindrome(string[1:-1])
+
 if __name__ == "__main__":
     import doctest
     print
