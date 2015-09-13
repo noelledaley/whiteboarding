@@ -22,6 +22,27 @@ def reverse_stack(string):
     return new_string
 
 
+def hot_potato(namelist, num):
+    """
+    Using a queue, return the name of the last person remaining after repetitive counting by num.
+
+    >>> hot_potato(["Bill","David","Susan","Jane","Kent","Brad"],7)
+    'Susan'
+    """
+
+    # As long as there is at least one player left
+    while len(namelist) > 1:
+
+        for i in range(num):
+            # The person at the front passes the potato and moves to the back of the queue
+            front = namelist.pop(0)
+            namelist.append(front)
+        # After num number of passes, remove the person at the front of the queue,
+        # since they have the potatoe
+        namelist.pop(0)
+
+    return namelist[0]
+
 if __name__ == "__main__":
     import doctest
     print
