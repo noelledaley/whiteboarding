@@ -22,7 +22,8 @@ def factorial(n):
     >>> factorial(5)
     120
 
-    >
+    >>> factorial(0)
+    0
     """
 
     if n <= 1:
@@ -31,6 +32,24 @@ def factorial(n):
     return n * factorial(n-1)
 
 
+def toStr(n, base):
+    """
+    Given a number and base, return the number in string format.
+
+    >>> toStr(56, 10)
+    '56'
+
+    >>> toStr(1453,16)
+    '5AD'
+    """
+
+    conversion = "0123456789ABCDEF"
+
+    # Once n < base, we can look up the corresponding character.
+    if n < base:
+        return conversion[n]
+
+    return toStr(n/base, base) + conversion[n%base]
 
 
 if __name__ == "__main__":
