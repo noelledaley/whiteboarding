@@ -84,8 +84,11 @@ def palindrome(string):
     False
     """
 
-    if len(string) <= 2:
-        return string[0] == string[-1]
+    # if len(string) <= 2:
+    #     return string[0] == string[-1]
+
+    if not string:
+        return True
 
     return string[0] == string[-1] and palindrome(string[1:-1])
 
