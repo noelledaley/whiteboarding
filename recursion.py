@@ -41,6 +41,9 @@ def toStr(n, base):
 
     >>> toStr(1453,16)
     '5AD'
+
+    >>> toStr(10, 2)
+    '1010'
     """
 
     conversion = "0123456789ABCDEF"
@@ -51,6 +54,19 @@ def toStr(n, base):
 
     return toStr(n/base, base) + conversion[n%base]
 
+
+def reverse(string):
+    """
+    Write a function that takes a string as a parameter and returns a new string that is the reverse of the old string.
+
+    >>> reverse('hello')
+    'olleh'
+
+    >>> reverse('hi there')
+    'ereht ih'
+    """
+
+    
 
 if __name__ == "__main__":
     import doctest
