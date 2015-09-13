@@ -92,6 +92,23 @@ def palindrome(string):
 
     return string[0] == string[-1] and palindrome(string[1:-1])
 
+
+def reverse_list(lst):
+    """
+    Write a recursive function to reverse a list.
+
+    >>> reverse_list([3, 2, 1])
+    [1, 2, 3]
+
+    >>> reverse_list([2, 2, 2, 1])
+    [1, 2, 2, 2]
+    """
+
+    if len(lst) == 1:
+        return lst
+    else:
+        return [lst[-1]] + reverse_list(lst[:-1])
+
 if __name__ == "__main__":
     import doctest
     print
