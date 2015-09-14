@@ -109,6 +109,33 @@ def reverse_list(lst):
     else:
         return [lst[-1]] + reverse_list(lst[:-1])
 
+
+def binary_search(lst, item):
+    """
+    Given an ordered list, check if an item is in the list using binary search and recursion.
+
+    >>> binary_search([0, 1, 2, 8, 13, 17, 19, 32, 42], 3)
+    False
+
+    >>> binary_search([1, 2, 3, 4], 3)
+    True
+    """
+
+    if len(lst) == 0:
+        return False
+
+    midpoint = len(lst) / 2
+    
+    if lst[midpoint] == item:
+        return True
+
+    if item < lst[midpoint]:
+        return binary_search(lst[:midpoint], item)
+    else:
+        return binary_search(lst[midpoint+1:], item)
+
+
+
 if __name__ == "__main__":
     import doctest
     print
